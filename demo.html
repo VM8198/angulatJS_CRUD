@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Angular</title>
+	<script type="text/javascript" src="./angular.min.js"></script>
+	<script type="text/javascript" src='./module.js'></script>
+	<script type="text/javascript" src='./controller.js'></script>	
+	<!-- <script type="text/javascript" src='./controller2.js'></script>	 -->
+</head>
+<body>
+	<!-- <div ng-app='first' ng-controller='firstController'>
+		<p>{{firstName}} {{lastName}}</p>
+		<p> {{email}} {{mobile}}</p>
+
+		<li ng-repeat="x in numbers">
+			<ul>{{x}}</ul>			
+		</li>
+	</div> -->
+
+	<!-- <div ng-app='first' ng-controller='firstController'>
+		<p>{{name}}</p>
+	</div> -->
+
+
+<!-- 	<div ng-app='first' ng-controller='firstController'>
+		<input type='text' ng-model='name'/>
+		<ul>
+			<li ng-repeat='x in names  | filter: name'>
+				<ul>{{x.name}}</ul>
+			</li>
+		</ul>
+
+
+	</div> -->	
+	<div ng-app='crud' ng-controller='firstController'>	
+		<form name='userData'>
+			<input type='text' ng-model='text' name='userName'/>
+			<button ng-click=add(text)>add</button>
+		</form>
+		<br><br>
+			<table style="border: 1px solid black">
+				<tr ng-repeat="x in user track by $index">
+					<td>{{x}}</td>
+					<td><button ng-click=update(x)>UPDATE</button></td>
+					<td><button ng-click=delete(x)>DELETE</button></td>
+				</tr>			
+			</table>
+	</div>
+
+
+	<!-- <div ng-app='crud' ng-controller='firstController'>	
+		<form name='userData'>
+			<input type='text' ng-model='text.fn' name='userName'/>
+			<input type='text' ng-model='text.ln' name='userName'/>
+			<button ng-click=add(text.fn,text.ln)>add</button>
+		</form>
+		<br><br>
+			<table style="border: 1px solid black">
+				<tr ng-repeat="x in user track by $index">
+					<td>{{x.fName}}</td>
+					<td>{{x.lName}}</td>
+					<td><button ng-click=update(x)>UPDATE</button></td>
+					<td><button ng-click=delete(x)>DELETE</button></td>
+				</tr>			
+			</table>
+	</div> -->
+	
+</body>
+</html>
